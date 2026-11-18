@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SupplySphere - Navigation Bar</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: stretch;
+            background: #183b4e;
+            height: 65px;
+        }
+
+        .navbar > a, .downbtn {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            color: white;
+            text-decoration: none;
+            white-space: nowrap;
+            font-size: 16px;
+        }
+
+        .downbtn {
+            background: none;
+            border: none;
+            font-family: inherit;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            position: relative;
+            display: flex;
+        }
+
+        .navbar a:hover, .downbtn:hover {
+            background: #dce8ed;
+            color: #183b4e;
+        }
+
+        .dropdown > div {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            min-width: 160px;
+            background: #dce8ed;
+            flex-direction: column;
+            z-index: 1;
+        }
+
+        .dropdown > div a {
+            display: block;
+            padding: 14px;
+            color: #183b4e;
+            text-decoration: none;
+        }
+
+        .dropdown > div a:hover {
+            background: #28566b;
+            color: white;
+        }
+
+        .dropdown:hover > div {
+            display: flex;
+        }
+
+        .navbar .login {
+            background: #28566b;
+            border: 1px solid #dce8ed;
+            margin: 14px 8px;
+            padding: 0 14px;
+        }
+
+        .navbar .signup {
+            border: 1px solid #dce8ed;
+            margin: 14px 8px;
+            padding: 0 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="dropdown">
+            <button type="button" class="downbtn">Operations ⌄</button>
+            <div>
+                <a href="#">Inventory</a>
+                <a href="#">Shipments</a>
+                <a href="#">Deliveries</a>
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button type="button" class="downbtn">Resources ⌄</button>
+            <div>
+                <a href="#">Suppliers</a>
+                <a href="#">Reports</a>
+                <a href="#">Updates</a>
+            </div>
+        </div>
+
+        <a href="#">About Us</a>
+        <a href="#" class="login">Log In</a>
+        <a href="#" class="signup">Sign Up</a>
+
+    </nav>
+
+</body>
+</html>
